@@ -1,28 +1,47 @@
 // out: ../css/style.css
+@bodyColorSld1: #849d8f;
+@bodyColorSld2: #8996a6;
+@bodyColorSld3: #a08e86;
+
+@userBlockColor: rgba(255, 255, 255, 0.2);
+
+.clearfix::after {
+    content: "";
+
+    display: table;
+    clear: both;
+}
+
 body {
     padding: 0;
     margin: 0;
-    font-family: "Roboto" "Arial" serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;/* Приближение из-за подстановки шрифтов */
     font-weight: 700;
-    line-height: 18px;/* Приближение из-за подстановки шрифтов */
+    line-height: 22px;/* Приближение из-за подстановки шрифтов */
     color:white;
-    background-color: #849d8f;
+    background-color: @bodyColorSld1;
+}
+
+.text-param (@font-size, @line-height, @color: white) {
+    font-size: @font-size;
+    line-height: @line-height;
+    color: @color;
 }
 
 a {
+    .text-param (16px, 18px);
+
     font-family: "Roboto" "Arial" serif;
-    font-size: 16px;/* Приближение из-за подстановки шрифтов */
     font-weight: 700;
-    line-height: 18px;/* Приближение из-за подстановки шрифтов */
+    text-align: center;
     text-decoration: none;
-    color:  #ffffff;
 }
 
 .main-header {
     position: relative;
     width: 1200px;
-    min-height: 650px;
+    min-height: 104px;
     margin: 0 auto;
 }
 
@@ -30,4 +49,94 @@ a {
     position: absolute;
     width: 154px;
     height: 64px;
+}
+
+.main-navigation {
+    line-height: 18px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+.shop-links {
+    float: left;
+    width: 349px;
+    padding: 4px 0;
+    margin-left: 190px;
+    margin-top: 30px;
+
+    li {
+        margin-right: 23px;
+    }
+
+    li:last-child {
+        margin-right: 0;
+    }
+}
+
+.rounded-angle {
+    border-radius: 20px;
+}
+
+.user-block {
+    float: right;
+    margin-right: 40px;
+
+    ul {
+        margin-top: 22px;
+        min-height: 33px;
+
+        li {
+            margin-right: 5px;
+
+            a {
+                .rounded-angle;
+                .text-param (14px, 16px);
+                display: block;
+                padding: 8px 0px;
+                text-align: right;
+                background-color: @userBlockColor;
+            }
+
+        }
+
+        li:first-child {
+            width: 33px;
+        }
+
+        li:nth-child(2) {
+            width: 93px;
+            a {
+                 padding-right: 20px;
+            }
+        }
+
+        li:last-child {
+            width: 117px;
+            margin-right: 0;
+
+            a {
+                 padding-right: 37px;
+            }
+        }
+    }
+}
+
+.mode {
+    float: right;
+    text-align: right;
+
+    span {
+        .text-param(14px, 20px);
+    }
+
+    .phone-number {
+        .text-param(22px, 24px);
+    }
 }
