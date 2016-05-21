@@ -5,6 +5,13 @@
 
 @userBlockColor: rgba(255, 255, 255, 0.2);
 
+@bkgColorLinkHover: #f8f7f4;
+@txtColorlinkHover: black;
+
+@txtMenuColor: black;
+@menuLinkHover: #fbded7;
+@menuLinkActive: #f6b5a5;
+
 .clearfix::after {
     content: "";
 
@@ -27,6 +34,10 @@ body {
     font-size: @font-size;
     line-height: @line-height;
     color: @color;
+}
+
+.rounded-angle (@radius: 20px) {
+    border-radius: @radius;
 }
 
 a {
@@ -57,22 +68,34 @@ a {
     ul {
         list-style: none;
         padding: 0;
+    }
 
-        li {
-            display: inline-block;
-        }
+    a:hover {
+        background-color: @bkgColorLinkHover;
+        color: @txtColorlinkHover;
+    }
+
+    a:active {
+        box-shadow: inset 0px 0px 5px 0px black;
     }
 }
 
 .shop-links {
     float: left;
-    width: 349px;
-    padding: 4px 0;
-    margin-left: 190px;
-    margin-top: 30px;
+    min-width: 349px;
+    margin-left: 178px;
+    margin-top: 23px;
 
     li {
-        margin-right: 23px;
+        display: inline-block;
+        margin-right: -4px;
+
+        a {
+            .rounded-angle;
+            display: block;
+            padding: 7px 14px;
+//            border-bottom: 1px solid white;
+        }
     }
 
     li:last-child {
@@ -80,8 +103,45 @@ a {
     }
 }
 
-.rounded-angle {
-    border-radius: 20px;
+.menu {
+    .rounded-angle(5px);
+    position: absolute;
+    top: 43px;
+    left: 170px;
+    width: 143px;
+    min-height: 171px;
+    background-color: @bkgColorLinkHover;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+    li {
+        a {
+            .text-param (14px, 16px);
+            display: block;
+            margin-bottom: 5px;
+            padding: 5px 5px;
+            padding-left: 20px;
+            font-weight: 400;
+            text-align: left;
+            color: @txtMenuColor;
+        }
+
+        a:hover {
+            background-color: @menuLinkHover;
+        }
+
+        a:active {
+            background-color: @menuLinkActive;
+            box-shadow: none;
+        }
+    }
+
+    li:first-child {
+        a {
+            margin-top: 7px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+    }
 }
 
 .user-block {
@@ -93,6 +153,7 @@ a {
         min-height: 33px;
 
         li {
+            display: inline-block;
             margin-right: 5px;
 
             a {
