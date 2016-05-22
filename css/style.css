@@ -349,9 +349,14 @@ a {
   line-height: 24px;
   color: white;
   padding: 9px 0;
-  padding-left: 15px;
+  padding-left: 20px;
   margin-right: 10px;
-  width: 353px;
+  width: 373px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #b2b2b2;
+  box-sizing: border-box;
 }
 .blog {
   margin-bottom: 35px;
