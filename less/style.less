@@ -216,7 +216,7 @@ a {
 .btn {
     .text-param(18px, 20px);
     .rounded-angle;
-    padding: 12px 0;
+    padding: 12px 20px;
 //    background: -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
 //    background: -moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
 //    background: -o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
@@ -239,7 +239,6 @@ a {
 .buy-btn {
     float: right;
     margin-right: 5px;
-    width: 165px;
 }
 
 .banner {
@@ -270,3 +269,46 @@ a {
     background-color: #633a25;
 }
 
+.banners {
+    margin-bottom: 35px;
+}
+
+.hits {
+}
+
+.hit {
+    position: relative;
+    display: inline-block;
+    margin-right: 18px;
+    min-height: 330px;
+    width: 269px;
+    vertical-align: top;
+
+    a {
+        .text-param (16px, 20px);
+        display: block;
+    }
+}
+
+.hit:first-child {
+    margin-left: -5px;
+}
+
+.hit:nth-child(4n) {
+    margin-right: 0;
+}
+
+.ice-cream {
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.price {
+    .text-param (45px, 45px);
+    position: absolute;
+    top: 215px;
+
+    span {
+        .text-param (35px, 45px);
+    }
+}
