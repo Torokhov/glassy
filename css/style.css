@@ -21,6 +21,11 @@ h2 {
   line-height: 41px;
   color: white;
 }
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+  color: white;
+}
 a {
   font-size: 16px;
   line-height: 18px;
@@ -215,6 +220,9 @@ a {
 .banners {
   margin-bottom: 35px;
 }
+.hits {
+  margin-bottom: 35px;
+}
 .hit {
   position: relative;
   display: inline-block;
@@ -250,4 +258,30 @@ a {
   font-size: 35px;
   line-height: 45px;
   color: white;
+}
+.features {
+  border-radius: 10px;
+  margin: 0;
+  margin-left: -5px;
+  padding: 0 15px;
+  padding-top: 1px;
+  color: #323232;
+  background-color: #efe2ca;
+}
+.features h3 {
+  color: #323232;
+  margin-bottom: 5px;
+}
+.left-column {
+  float: left;
+  width: 550px;
+}
+.right-column {
+  float: right;
+  width: 550px;
+}
+.feature {
+  font-weight: 400;
+  margin-left: 60px;
+  margin-bottom: 25px;
 }
