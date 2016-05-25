@@ -438,9 +438,10 @@ a {
   border-radius: 10px;
   margin: 0;
   margin-left: -5px;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   padding: 0 15px;
   padding-top: 1px;
+  padding-bottom: 5px;
   color: #323232;
   background-color: #efe2ca;
 }
@@ -459,13 +460,13 @@ a {
 .feature {
   font-weight: 400;
   margin-left: 60px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .blog {
   margin-left: -5px;
 }
 .blog-new {
-  border-radius: 10px;
+  border-radius: 15px;
   float: left;
   width: 540px;
   min-height: 210px;
@@ -494,7 +495,7 @@ a {
   text-decoration: underline;
 }
 .blog-sub {
-  border-radius: 10px;
+  border-radius: 15px;
   float: right;
   width: 520px;
   padding: 0px 16px;
@@ -523,7 +524,7 @@ a {
   box-sizing: border-box;
 }
 .blog {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 .map {
   min-height: 430px;
@@ -553,7 +554,7 @@ a {
   margin-bottom: 5px;
 }
 .contacts p:nth-child(5) {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .contacts b {
   font-size: 18px;
@@ -567,7 +568,7 @@ a {
 }
 .contacts b:nth-child(4) {
   display: block;
-  margin-bottom: -10px;
+  margin-bottom: -15px;
 }
 .btn-contacts {
   display: block;
