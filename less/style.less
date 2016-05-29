@@ -3,7 +3,13 @@
 @bodyColorSld2: #8996a6;
 @bodyColorSld3: #a08e86;
 
+@bodyColorTxt: white;
+
+@linkColorHover: #e84d37;
+@linkColorActive: #e84d37;
+
 @userBlockColor: rgba(255, 255, 255, 0.2);
+@userBlockIconColor: white;
 
 @bkgColorLinkHover: #f8f7f4;
 @txtColorlinkHover: black;
@@ -17,6 +23,9 @@
 
 @blogNewBkgColor: white;
 @blogSubBkgColor: #f8f7f4;
+
+@SocialBtnColor: rgba(255, 255, 255, 0.8);
+@SocialBtnColorHvr: rgba(255, 255, 255, 1.0);
 
 @contactsBkgColor: rgba(255, 255, 255, 0.98);
 @contactsTxtColor: black;
@@ -35,7 +44,7 @@ body {
     font-size: 16px;/* Приближение из-за подстановки шрифтов */
     font-weight: 700;
     line-height: 22px;/* Приближение из-за подстановки шрифтов */
-    color:white;
+    color: @bodyColorTxt;
     background-color: @bodyColorSld1;
 }
 
@@ -97,6 +106,16 @@ a {
     a:hover {
         background-color: @bkgColorLinkHover;
         color: @txtColorlinkHover;
+
+        svg {
+                fill: @txtColorlinkHover;
+        }
+
+         span {
+            svg {
+                fill: @txtColorlinkHover;
+            }
+        }
     }
 
     a:active {
@@ -130,6 +149,7 @@ a {
 .menu {
     .rounded-angle(5px);
     position: absolute;
+//    display: none;
     top: 43px;
     left: 180px;
     width: 143px;
@@ -192,6 +212,10 @@ a {
                 background-color: @userBlockColor;
             }
 
+            svg {
+                fill: @userBlockIconColor;
+            }
+
         }
 
         li:first-child {
@@ -221,16 +245,20 @@ a {
     }
 }
 
-.enter span {
-    position: absolute;
-    left: 10px;
-    top: 5px;
+.enter {
+    span {
+        position: absolute;
+        left: 10px;
+        top: 5px;
+    }
 }
 
-.basket span {
-    position: absolute;
-    left: 10px;
-    top: 5px;
+.basket {
+    span {
+        position: absolute;
+        left: 10px;
+        top: 5px;
+    }
 }
 
 .mode {
@@ -503,6 +531,10 @@ a {
         text-align: left;
         text-decoration: underline;
     }
+
+    a:hover {
+        color: @linkColorHover;
+    }
 }
 
 .blog-sub {
@@ -626,6 +658,25 @@ a {
             font-size: 0px;
             text-align: center;
             background-color: @bodyColorSld1;
+
+            svg {
+                fill: @SocialBtnColor;
+            }
+
+        }
+
+        a:hover {
+            svg {
+                fill: @SocialBtnColorHvr;
+            }
+        }
+
+        a:active {
+            box-shadow: 0px -1px 2px 0px black;
+
+             svg {
+                fill: @SocialBtnColor;
+            }
         }
     }
 }
@@ -641,6 +692,10 @@ a {
     a {
         .text-param(13px, 18px);
         font-weight: 400;
+    }
+
+    a:hover {
+        color: @linkColorHover;
     }
 
     .providers {
@@ -693,5 +748,9 @@ a {
         background-image: url("../img/academy-icon.svg");
         background-repeat: no-repeat;
         background-position: center;
+    }
+
+    a:hover {
+        color: @linkColorHover;
     }
 }
