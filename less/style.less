@@ -538,7 +538,6 @@ a {
 }
 
 .blog-sub {
-    .rounded-angle (15px);
     float: right;
     width: 520px;
     padding: 0px 16px;
@@ -547,6 +546,8 @@ a {
     font-weight: 400;
     color: @featuresTxtColor;
     border: 5px solid #92cdff;
+    border-image: url(../img/border-bkg.png) 5 round;
+    .rounded-angle (15px);
     background-color: @blogSubBkgColor;
 
     p {

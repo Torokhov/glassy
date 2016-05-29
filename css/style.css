@@ -434,7 +434,6 @@ a {
   color: #e84d37;
 }
 .blog-sub {
-  border-radius: 15px;
   float: right;
   width: 520px;
   padding: 0px 16px;
@@ -443,6 +442,8 @@ a {
   font-weight: 400;
   color: #323232;
   border: 5px solid #92cdff;
+  border-image: url(../img/border-bkg.png) 5 round;
+  border-radius: 15px;
   background-color: #f8f7f4;
 }
 .blog-sub p {
