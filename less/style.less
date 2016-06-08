@@ -45,7 +45,10 @@ body {
     font-weight: 700;
     line-height: 22px;/* Приближение из-за подстановки шрифтов */
     color: @bodyColorTxt;
-    background-color: @bodyColorSld1;
+
+     input[type="radio"] {
+        display: none;
+    }
 }
 
 .text-param (@font-size, @line-height, @color: white) {
@@ -80,7 +83,7 @@ a {
     width: 1200px;
     min-height: 104px;
     margin: 0 auto;
-    margin-bottom: 533px;
+//    margin-bottom: 533px;
 }
 
 .logo {
@@ -156,6 +159,7 @@ a {
     min-height: 171px;
     background-color: @bkgColorLinkHover;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1;
 
     li {
         a {
@@ -280,6 +284,84 @@ a {
     width: 1140px;
 }
 
+.site-wrapper {
+    background-repeat: no-repeat;
+    background-position: top center;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.slyder {
+    position: relative;
+    padding-top: 280px;
+    margin-left: -5px;
+    margin-bottom: 40px;
+    text-align: center;
+
+    h2 {
+        .text-param(60px, 60px);
+        width: 700px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+        font-weight: 800;
+    }
+
+}
+
+.slyder-item {
+    display: none;
+}
+
+.slyder-controls {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    z-index: 20;
+
+    font-size: 0;
+}
+
+.slyder-controls label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+
+    vertical-align: top;
+
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#btn-1:checked ~.site-wrapper #slide1,
+#btn-2:checked ~.site-wrapper #slide2,
+#btn-3:checked ~.site-wrapper #slide3 {
+    display: block;
+}
+
+#btn-1:checked ~ .site-wrapper {
+    background-color: @bodyColorSld1;
+    background-image: url(../img/slide1.png);
+}
+
+#btn-2:checked ~ .site-wrapper {
+    background-color: @bodyColorSld2;
+    background-image: url(../img/slide2.png);
+}
+
+#btn-3:checked ~ .site-wrapper {
+    background-color: @bodyColorSld3;
+    background-image: url(../img/slide3.png);
+}
+
+#btn-1:checked ~.site-wrapper label[for="btn-1"],
+#btn-2:checked ~.site-wrapper label[for="btn-2"],
+#btn-3:checked ~.site-wrapper label[for="btn-3"] {
+    background-color: #ffffff;
+}
+
 .btn {
     .text-param(18px, 20px);
     .rounded-angle;
@@ -301,6 +383,26 @@ a {
     background: linear-gradient(0deg, #f26843 0%, #e74a35 100%);
     background-color:  rgba(0, 0, 0, 0.07);
     box-shadow: inset 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+}
+
+.slyder-btn {
+    display: inline-block;
+    padding: 12px 50px;
+
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 41px;
+    vertical-align: top;
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+    background: #f26843;
+    background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+    background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+    background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+    border-radius: 100px;
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
 .buy-btn {
