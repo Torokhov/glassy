@@ -605,6 +605,7 @@ a {
 
 .blog {
     margin-left: -5px;
+    margin-bottom: 40px;
 }
 
 .blog-new {
@@ -670,19 +671,29 @@ a {
     }
 }
 
-.blog {
-    margin-bottom: 40px;
-}
-
 .map {
-    min-height: 430px;
+    position: relative;
+    width: 1200px;
+    margin-left: -35px;
+    height: 430px;
+    background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    iframe {
+        height: 430px;
+        width: 1200px;
+        border: none;
+    }
+
 }
 
 .contacts {
     .rounded-angle(15px);
     .text-param(14px, 20px);
-    float: right;
-    margin-top: 60px;
+    position: absolute;
+    top: 60px;
+    left: 870px;
     padding: 0 25px;
     width: 252px;
     height: 305px;
@@ -739,7 +750,7 @@ a {
 .social-links {
     float: left;
     margin: 0;
-    margin-top: 35px;
+    margin-top: 28px;
     margin-left: 25px;
     padding: 0;
     width: 210px;
@@ -788,7 +799,7 @@ a {
     position: relative;
     float: left;
     margin: 0;
-    margin-top: 32px;
+    margin-top: 23px;
     padding: 0;
     list-style: none;
 
@@ -831,7 +842,7 @@ a {
 .copyright {
     position: relative;
     float: right;
-    margin-top: 61px;
+    margin-top: 55px;
     margin-right: 20px;
     .text-param(13px, 18px);
     font-weight: 400;
