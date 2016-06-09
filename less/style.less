@@ -287,7 +287,10 @@ a {
 .site-wrapper {
     background-repeat: no-repeat;
     background-position: top center;
-    transition: background-image 0.5s ease, background-color 0.5s ease;
+    -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
+    -o-transition: background-image 0.5s ease, background-color 0.5s ease;
+    -moz-transition: background-image 0.5s ease, background-color 0.5s ease;
+
 }
 
 .slyder {
@@ -759,7 +762,7 @@ a {
     li {
         .rounded-angle;
         display: inline-block;
-        padding: 3px 3px;
+//        padding: 3px 3px;
         margin-right: 7px;
         vertical-align: top;
         background-color:  rgba(255, 255, 255, 0.5);
@@ -769,6 +772,7 @@ a {
             display: block;
             width: 32px;
             height: 32px;
+            margin: 3px 3px;
             font-size: 0px;
             text-align: center;
             background-color: @bodyColorSld1;
