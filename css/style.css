@@ -352,6 +352,7 @@ a {
   position: relative;
   display: inline-block;
   margin-right: 18px;
+  margin-left: -5px;
   min-height: 330px;
   width: 269px;
   vertical-align: top;
@@ -371,7 +372,7 @@ a {
   margin: 0 auto;
   margin-bottom: 20px;
 }
-.product::before {
+.hit::before {
   position: absolute;
   content: "";
   width: 61px;
@@ -387,10 +388,8 @@ a {
 .product:hover .btn-fast-show {
   display: block;
 }
-.product:first-child {
-  margin-left: -5px;
-}
-.product:nth-child(4n) {
+.product:nth-child(4n),
+.product:last-child {
   margin-right: 0;
 }
 .ice-cream {
@@ -908,4 +907,34 @@ a {
   font-weight: 500;
   border: 2px solid white;
   box-sizing: border-box;
+}
+.products-nav ul {
+  float: right;
+}
+.products-nav ul li {
+  display: inline-block;
+  vertical-align: top;
+}
+.products-nav ul li a {
+  display: block;
+  font-size: 16px;
+  line-height: 18px;
+  color: white;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+.products-nav ul li .active {
+  color: #000000;
+  background-color: #ffffff;
+}
+.forward,
+.backward {
+  fill: #ffffff;
+}
+.forward {
+  opacity: 0.2;
+}
+.catalog .container {
+  border-bottom: 1px solid rgba(248, 247, 244, 0.5);
 }
