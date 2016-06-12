@@ -19,6 +19,8 @@
 @menuLinkHover: #fbded7;
 @menuLinkActive: #f6b5a5;
 
+@formTextColor: #999999;
+
 @featuresTxtColor: #323232;
 @featuresBkgColor: #efe2ca;
 
@@ -271,6 +273,36 @@ a {
             }
         }
     }
+}
+
+.search-form {
+    .rounded-angle(5px);
+    position: absolute;
+    left: -305px;
+//    width: 341px;
+//    height: 84px;
+    display: none;
+    padding: 20px 15px;
+    background-color: @bkgColorLinkHover;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+    input[type="search"] {
+        .rounded-angle(5px);
+        .text-param(14px, 24px);
+        width: 311px;
+        height: 44px;
+        font-weight: 400;
+        color: @formTextColor;
+        border: 1px solid #d3d3d2;
+        box-sizing: border-box;
+        background-color: #ffffff;
+    }
+}
+
+.search:hover + .search-form,
+.search-form:hover,
+.search-form:active {
+    display: block;
 }
 
 .enter {
