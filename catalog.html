@@ -72,7 +72,81 @@
             </nav>
         </header>
         <main class="container">
-            
+            <h1>Сливочное мороженое</h1>
+            <form class="sort-form" method="get">
+                <ul class="criteries">
+                    <li>
+                        <label>Сортировка:</label>
+                        <div class="criterion">
+                            <ul>
+                                <li>По популярности</li>
+                                <li>Сначала дорогие</li>
+                                <li>Сначала недорогие</li>
+                                <li>По жирности</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <label>Цена: <span class="price-start">100</span>руб.- <span class="price-end">500</span>руб.</label>
+                        <div class="criterion">
+                            <div class="range">
+                                <div class="range-active"></div>
+                                <div class="range-toogle"></div>
+                                <div class="range-toogle"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label>Жирность:</label>
+                        <div class="criterion">
+                            <ul>
+                                <li>
+                                    <input type="radio" id="null-percent" name="fatness">
+                                    <label for="null-percent">0%</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="ten-percent" name="fatness">
+                                    <label for="ten-percent">до 10%</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="thirty-percent" name="fatness">
+                                    <label for="thirty-percent">до 30%</label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="thirty-percent-more" name="fatness">
+                                    <label for="thirty-percent-more">выше 30%</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <label>Наполнители:</label>
+                        <ul class="fillers">
+                            <li>
+                                <input type="checkbox" id="chocolate" name="chocolate">
+                                <label for="chocolate">Шоколадные</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sugar" name="sugar">
+                                <label for="sugar">Сахарные присыпки</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fruts" name="fruts">
+                                <label for="fruts">Фрукты</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="syrop" name="syrop">
+                                <label for="syrop">Сиропы</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="jam" name="jam">
+                                <label for="jam">Джемы</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="criterion enter" href="#">Применить</a>
+            </form>
         </main>
        <footer class="main-footer clearfix">
             <ul class="social-links">
