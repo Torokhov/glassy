@@ -7,6 +7,7 @@
 
 @linkColorHover: #e84d37;
 @linkColorActive: #e84d37;
+@linkColorVisit: #d07058;
 
 @userBlockColor: rgba(255, 255, 255, 0.2);
 @userBlockIconColor: white;
@@ -31,9 +32,12 @@
 @contactsTxtColor: black;
 
 @sortBlockColor: rgba(255, 255, 255, 0.2);
+@sortBlockHover: #ffffff;
 
 @rangeColor: rgba(248, 247, 244, 0.5);
 @rangeColorActive: #f8f7f4;
+
+@pageNavHvrColor: rgba(255, 255, 255, 0.2);
 
 .clearfix::after {
     content: "";
@@ -132,34 +136,39 @@ a {
 }
 
 .shop-links {
+    position: relative;
     float: left;
     min-width: 349px;
     margin-left: 188px;
     margin-top: 23px;
+}
 
-    li {
-        display: inline-block;
-        margin-right: -4px;
+.shop-link {
+    display: inline-block;
+    margin-right: -4px;
 
-        a {
-            .rounded-angle;
-            display: block;
-            padding: 7px 14px;
-//            border-bottom: 1px solid white;
-        }
+    .visit {
+        color: #ffffff;
+        background-color: @linkColorVisit;
     }
+}
 
-    li:last-child {
-        margin-right: 0;
-    }
+.shop-link > a {
+    .rounded-angle;
+    display: block;
+    padding: 7px 14px;
+//                border-bottom: 1px solid white;
+}
+
+.shop-link:last-child {
+    margin-right: 0;
 }
 
 .menu {
     .rounded-angle(5px);
     position: absolute;
     display: none;
-    top: 43px;
-    left: 180px;
+    top: 30px;
     width: 143px;
     min-height: 171px;
     background-color: @bkgColorLinkHover;
@@ -195,6 +204,16 @@ a {
             font-weight: 600;
         }
     }
+
+    .visit {
+        color: #ffffff;
+        background-color: @linkColorVisit;
+    }
+}
+
+.catalog:hover + .menu,
+.menu:hover {
+    display: block;
 }
 
 .user-block {
@@ -972,12 +991,34 @@ a {
 }
 
 .criterion-link {
+    position: relative;
     .text-param(16px, 18px);
     display: block;
     padding: 9px 0;
     padding-left: 15px;
     font-weight: 500;
     text-align: left;
+}
+
+.arrow {
+    position: absolute;
+    left: 170px;
+    top: 7px;
+}
+
+.arrow-icon {
+    fill: rgb(255, 255, 255);
+}
+
+.criterion-link:hover {
+    color: #000000;
+    background-color: @sortBlockHover;
+}
+
+.criterion-link:hover {
+    .arrow-icon {
+        fill: rgb(0,0,0);
+    }
 }
 
 .criterion-list {
@@ -1011,6 +1052,7 @@ a {
     background-color: @rangeColorActive;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .min {
@@ -1103,6 +1145,17 @@ a {
     box-sizing: border-box;
 }
 
+.sort-form .enter:hover {
+    color: #000000;
+    background-color: @sortBlockHover;
+}
+
+.sort-form .enter:active {
+    color: #000000;
+    background-color: @sortBlockHover;
+     box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.64);
+}
+
 .products-nav {
     ul {
         float: right;
@@ -1118,6 +1171,15 @@ a {
 //                width: 26px;
 //                height: 26px;
                 border-radius: 50%;
+            }
+
+            a:hover {
+                background-color: @pageNavHvrColor;
+            }
+
+            a:active {
+                color: #000000;
+                background-color: #ffffff;
             }
 
             .active {

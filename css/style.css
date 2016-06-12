@@ -75,29 +75,33 @@ a {
   box-shadow: inset 0px 0px 5px 0px black;
 }
 .shop-links {
+  position: relative;
   float: left;
   min-width: 349px;
   margin-left: 188px;
   margin-top: 23px;
 }
-.shop-links li {
+.shop-link {
   display: inline-block;
   margin-right: -4px;
 }
-.shop-links li a {
+.shop-link .visit {
+  color: #ffffff;
+  background-color: #d07058;
+}
+.shop-link > a {
   border-radius: 20px;
   display: block;
   padding: 7px 14px;
 }
-.shop-links li:last-child {
+.shop-link:last-child {
   margin-right: 0;
 }
 .menu {
   border-radius: 5px;
   position: absolute;
   display: none;
-  top: 43px;
-  left: 180px;
+  top: 30px;
   width: 143px;
   min-height: 171px;
   background-color: #f8f7f4;
@@ -127,6 +131,14 @@ a {
   margin-top: 7px;
   margin-bottom: 12px;
   font-weight: 600;
+}
+.menu .visit {
+  color: #ffffff;
+  background-color: #d07058;
+}
+.catalog:hover + .menu,
+.menu:hover {
+  display: block;
 }
 .user-block {
   position: relative;
@@ -801,6 +813,7 @@ a {
   padding: 7px 0;
 }
 .criterion-link {
+  position: relative;
   font-size: 16px;
   line-height: 18px;
   color: white;
@@ -809,6 +822,21 @@ a {
   padding-left: 15px;
   font-weight: 500;
   text-align: left;
+}
+.arrow {
+  position: absolute;
+  left: 170px;
+  top: 7px;
+}
+.arrow-icon {
+  fill: #ffffff;
+}
+.criterion-link:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+.criterion-link:hover .arrow-icon {
+  fill: #000000;
 }
 .criterion-list {
   display: none;
@@ -837,6 +865,7 @@ a {
   background-color: #f8f7f4;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  cursor: pointer;
 }
 .min {
   left: -5px;
@@ -908,6 +937,15 @@ a {
   border: 2px solid white;
   box-sizing: border-box;
 }
+.sort-form .enter:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+.sort-form .enter:active {
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.64);
+}
 .products-nav ul {
   float: right;
 }
@@ -923,6 +961,13 @@ a {
   font-weight: 500;
   padding: 5px 10px;
   border-radius: 50%;
+}
+.products-nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.products-nav ul li a:active {
+  color: #000000;
+  background-color: #ffffff;
 }
 .products-nav ul li .active {
   color: #000000;
