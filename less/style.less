@@ -30,6 +30,11 @@
 @contactsBkgColor: rgba(255, 255, 255, 0.98);
 @contactsTxtColor: black;
 
+@sortBlockColor: rgba(255, 255, 255, 0.2);
+
+@rangeColor: rgba(248, 247, 244, 0.5);
+@rangeColorActive: #f8f7f4;
+
 .clearfix::after {
     content: "";
 
@@ -152,7 +157,7 @@ a {
 .menu {
     .rounded-angle(5px);
     position: absolute;
-//    display: none;
+    display: none;
     top: 43px;
     left: 180px;
     width: 143px;
@@ -870,3 +875,233 @@ a {
         color: @linkColorHover;
     }
 }
+
+//catalog
+.catalog {
+    background-color: @bodyColorSld1;
+}
+
+.breadscrumbs {
+    margin-top: 25px;
+    ul {
+        padding-left: 25px;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+
+            a {
+                .text-param(14px, 16px);
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.catalog h1 {
+    .text-param(35px, 41px);
+    margin-top: -15px;
+    margin-left: -5px;
+    font-weight: 700px;
+}
+
+.sort-form {
+    margin-left: -5px;
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+
+.criteries {
+    .main-criterion {
+        .text-param(14px, 16px);
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 16px;
+        font-weight: 500;
+    }
+
+    label {
+       .text-param(16px, 18px);
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+
+.criteries > li {
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.criteries > li:first-child {
+    width: 194px;
+}
+
+.criteries > li:nth-child(2) {
+    width: 220px;
+}
+
+.criteries > li:nth-child(3) {
+    width: 415px;
+}
+
+.criteries > li:nth-child(4) {
+    width: 703px;
+}
+
+.criteries > li:last-child {
+    width: 144px;
+    margin-top: 25px;
+}
+
+.criterion {
+    .rounded-angle;
+    background-color: @sortBlockColor;
+}
+
+.criterion {
+    li {
+        position: relative;
+        padding: 7px 0;
+    }
+}
+
+.criterion-link {
+    .text-param(16px, 18px);
+    display: block;
+    padding: 9px 0;
+    padding-left: 15px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.criterion-list {
+    display: none;
+}
+
+.criterion-range {
+    padding: 16px 0;
+}
+
+.range {
+    margin: 0 auto;
+    width: 188px;
+    height: 4px;
+    background-color: @rangeColor;
+}
+
+.range-active {
+    position: relative;
+    margin-left: 25px;
+    height: inherit;
+    width: 107px;
+    background-color: @rangeColorActive;
+}
+
+.range-toogle {
+    position: absolute;
+    top: -8px;
+    width: 21px;
+    height: 21px;
+    background-color: @rangeColorActive;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.min {
+    left: -5px;
+}
+
+.max {
+    left: 90px;
+}
+
+.criterion-fatness {
+
+    li {
+        margin-right: 45px;
+    }
+
+    li:first-child {
+        margin-left: 45px;
+    }
+
+    li:last-child {
+        margin-right: 0;
+    }
+}
+
+.custom-radio {
+    position: absolute;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #f8f7f4;
+    border-radius: 50%;
+}
+
+.custom-radio-check {
+    display: none;
+    width: 14px;
+    height: 14px;
+    margin: 3px;
+    background-color: #f8f7f4;
+    border-radius: 50%;
+}
+
+.catalog {
+    input[type="radio"]:checked + .custom-radio > .custom-radio-check {
+       display: block;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+}
+
+.criterion-fillers {
+    label::before {
+        position: absolute;
+        left: -30px;
+        content: " ";
+        width: 18px;
+        height: 18px;
+        border: 1px solid #f8f7f4;
+        .rounded-angle(3px);
+    }
+
+    input[type="checkbox"]:checked + label::before {
+        background-image: url(../img/checkbox-icon-check.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    li:first-child {
+        margin-left: 45px;
+    }
+
+    li {
+        margin-right: 45px;
+    }
+
+    li:last-child {
+        margin-right: 0;
+    }
+}
+
+.sort-form .enter {
+    display: block;
+    padding: 8px 0;
+    .text-param(16px, 18px);
+    font-weight: 500;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+

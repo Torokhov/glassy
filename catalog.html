@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Glassy-каталог</title>
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900&subset=cyrillic' rel='stylesheet' type='text/css'>
-<!--        <link href="css/style.css" rel="stylesheet">-->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body class="catalog">
         <header class="main-header">
@@ -65,8 +65,8 @@
             </div>
             <nav class="breadscrumbs">
                 <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Главная  &raquo;</a></li>
+                    <li><a href="#">Каталог  &raquo;</a></li>
                     <li><a href="#">Сливочное</a></li>
                 </ul>
             </nav>
@@ -76,52 +76,62 @@
             <form class="sort-form" method="get">
                 <ul class="criteries">
                     <li>
-                        <label>Сортировка:</label>
-                        <div class="criterion">
-                            <ul>
-                                <li>По популярности</li>
-                                <li>Сначала дорогие</li>
-                                <li>Сначала недорогие</li>
-                                <li>По жирности</li>
-                            </ul>
-                        </div>
+                        <label class="main-criterion">Сортировка:</label>
+                        <a class="criterion criterion-link" href="#">по популярности</a>
+                        <ul class="criterion-list">
+                            <li>По популярности</li>
+                            <li>Сначала дорогие</li>
+                            <li>Сначала недорогие</li>
+                            <li>По жирности</li>
+                        </ul>
                     </li>
                     <li>
-                        <label>Цена: <span class="price-start">100</span>руб.- <span class="price-end">500</span>руб.</label>
-                        <div class="criterion">
+                        <label class="main-criterion">Цена: <span class="price-start">100</span> руб.- <span class="price-end">500</span> руб.</label>
+                        <div class="criterion criterion-range">
                             <div class="range">
-                                <div class="range-active"></div>
-                                <div class="range-toogle"></div>
-                                <div class="range-toogle"></div>
+                                <div class="range-active">
+                                     <div class="range-toogle min"></div>
+                                    <div class="range-toogle max"></div>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <label>Жирность:</label>
-                        <div class="criterion">
-                            <ul>
-                                <li>
-                                    <input type="radio" id="null-percent" name="fatness">
-                                    <label for="null-percent">0%</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="ten-percent" name="fatness">
-                                    <label for="ten-percent">до 10%</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="thirty-percent" name="fatness">
-                                    <label for="thirty-percent">до 30%</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="thirty-percent-more" name="fatness">
-                                    <label for="thirty-percent-more">выше 30%</label>
-                                </li>
-                            </ul>
-                        </div>
+                        <label class="main-criterion">Жирность:</label>
+                        <ul class="criterion criterion-fatness">
+                            <li>
+                                <input type="radio" id="null-percent" name="fatness">
+                                <div class="custom-radio">
+                                    <div class="custom-radio-check"></div>
+                                </div>
+                                <label for="null-percent">0%</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="ten-percent" name="fatness">
+                                <div class="custom-radio">
+                                    <div class="custom-radio-check"></div>
+                                </div>
+                                <label for="ten-percent">до 10%</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="thirty-percent" name="fatness">
+                                <div class="custom-radio">
+                                    <div class="custom-radio-check"></div>
+                                </div>
+                                <label for="thirty-percent">до 30%</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="thirty-percent-more" name="fatness" checked>
+                                <div class="custom-radio">
+                                    <div class="custom-radio-check"></div>
+                                </div>
+                                <label for="thirty-percent-more">выше 30%</label>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <label>Наполнители:</label>
-                        <ul class="fillers">
+                        <label class="main-criterion">Наполнители:</label>
+                        <ul class="criterion criterion-fillers">
                             <li>
                                 <input type="checkbox" id="chocolate" name="chocolate">
                                 <label for="chocolate">Шоколадные</label>
@@ -144,8 +154,10 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                         <a class="criterion enter" href="#">Применить</a>
+                    </li>
                 </ul>
-                <a class="criterion enter" href="#">Применить</a>
             </form>
             <section class="products">
                 <article class="product">
