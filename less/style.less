@@ -20,6 +20,8 @@
 @menuLinkActive: #f6b5a5;
 
 @formTextColor: #999999;
+@formBorderColor: #d3d3d2;
+@formBkgColor: #ffffff;
 
 @featuresTxtColor: #323232;
 @featuresBkgColor: #efe2ca;
@@ -116,25 +118,6 @@ a {
         list-style: none;
         padding: 0;
     }
-
-    a:hover {
-        background-color: @bkgColorLinkHover;
-        color: @txtColorlinkHover;
-
-        svg {
-                fill: @txtColorlinkHover;
-        }
-
-         span {
-            svg {
-                fill: @txtColorlinkHover;
-            }
-        }
-    }
-
-    a:active {
-        box-shadow: inset 0px 0px 5px 0px black;
-    }
 }
 
 .shop-links {
@@ -153,13 +136,6 @@ a {
         color: #ffffff;
         background-color: @linkColorVisit;
     }
-}
-
-.shop-link > a {
-    .rounded-angle;
-    display: block;
-    padding: 7px 14px;
-//                border-bottom: 1px solid white;
 }
 
 .shop-link:last-child {
@@ -213,7 +189,7 @@ a {
     }
 }
 
-.catalog:hover + .menu,
+.ice-cream-catalog:hover + .menu,
 .menu:hover {
     display: block;
 }
@@ -222,57 +198,104 @@ a {
     position: relative;
     float: right;
     margin-right: 30px;
+}
 
-    ul {
-        margin-top: 22px;
-        min-height: 33px;
+ .user-links {
+     margin-top: 22px;
+     min-height: 33px;
 
-        li {
-            position: relative;
-            display: inline-block;
-            margin-right: 5px;
+     svg {
+         fill: @userBlockIconColor;
+    }
 
-            a {
-                .rounded-angle;
-                .text-param (14px, 16px);
-                display: block;
-                padding: 7px 0px;
-                text-align: right;
-                vertical-align: middle;
-                background-color: @userBlockColor;
-            }
 
-            svg {
-                fill: @userBlockIconColor;
-            }
+    li:first-child {
+        width: 33px;
 
-        }
-
-        li:first-child {
-            width: 33px;
-            a {
-                padding: 6px 0px;
-                text-align: center;
-                color: rgba(255, 255, 255, 0);
-            }
-        }
-
-        li:nth-child(2) {
-            width: 93px;
-            a {
-                padding-right: 20px;
-            }
-        }
-
-        li:last-child {
-            width: 117px;
-            margin-right: 0;
-
-            a {
-                 padding-right: 37px;
-            }
+        a {
+            padding-left: 8px;
         }
     }
+
+    li:nth-child(2) {
+         width: 93px;
+    }
+
+    li:last-child {
+         width: 117px;
+         margin-right: 0;
+    }
+}
+
+.user-links > li {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.shop-link > a {
+    .rounded-angle;
+    display: block;
+    padding: 7px 14px;
+//                border-bottom: 1px solid white;
+}
+
+.shop-link > a:hover,
+.user-link > a:hover{
+    background-color: @bkgColorLinkHover;
+    color: @txtColorlinkHover;
+
+    svg {
+        fill: @txtColorlinkHover;
+    }
+
+    span {
+        svg {
+            fill: @txtColorlinkHover;
+        }
+    }
+}
+
+.shop-link > a:active,
+.user-link > a:active{
+    box-shadow: inset 0px 0px 5px 0px black;
+}
+
+.user-link > a {
+    .rounded-angle;
+    .text-param (14px, 16px);
+    display: block;
+    padding: 7px 15px;
+    text-align: right;
+    vertical-align: middle;
+    background-color: @userBlockColor;
+}
+
+.user-link > .full {
+    background-color: @bkgColorLinkHover;
+    color: @txtColorlinkHover;
+
+    svg {
+        fill: @txtColorlinkHover;
+    }
+
+    span {
+        svg {
+            fill: @txtColorlinkHover;
+        }
+    }
+}
+
+.full::before {
+    position: absolute;
+    left: 15px;
+    top: 9px;
+    content: "";
+    width: 16px;
+    height: 11px;
+    background-image: url(../img/full-basket-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .search-form {
@@ -291,11 +314,12 @@ a {
         .text-param(14px, 24px);
         width: 311px;
         height: 44px;
+        padding-left: 10px;
         font-weight: 400;
         color: @formTextColor;
-        border: 1px solid #d3d3d2;
+        border: 1px solid @formBorderColor;
         box-sizing: border-box;
-        background-color: #ffffff;
+        background-color: @formBkgColor;
     }
 }
 
@@ -306,6 +330,8 @@ a {
 }
 
 .enter {
+    padding-right: 20px;
+
     span {
         position: absolute;
         left: 10px;
@@ -313,17 +339,166 @@ a {
     }
 }
 
+.enter-form {
+    .rounded-angle(5px);
+    position: absolute;
+    left: -200px;
+    display: none;
+    padding: 20px 15px;
+    background-color: @bkgColorLinkHover;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+
+    input[type="email"],
+    input[type="password"] {
+        .text-param(12px, 24px);
+        .rounded-angle(5px);
+        width: 241px;
+        height: 44px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+        font-weight: 400;
+        color: @formTextColor;
+        background-color: @formBkgColor;
+        border: 1px solid @formBorderColor;
+        box-sizing: border-box;
+    }
+
+    .enter-btn {
+        display: inline-block;
+        width: 60px;
+        vertical-align: top;
+    }
+
+    .enter-links {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        vertical-align: top;
+
+        li {
+            display: block;
+
+            a {
+                .text-param(13px, 24px);
+                display: block;
+                width: 120px;
+                padding-left: 10px;
+                color:  #323232;
+                font-weight: 400;
+                text-align: left;
+            }
+
+            a:hover {
+                color: @linkColorHover;
+            }
+        }
+    }
+}
+
+.enter:hover + .enter-form,
+.enter-form:hover,
+.enter-form:active {
+    display: block;
+}
+
 .basket {
+    padding-right: 37px;
+
     span {
         position: absolute;
         left: 10px;
         top: 5px;
     }
+}
+
+.basket-form {
+    .rounded-angle(5px);
+    position: absolute;
+    display: none;
+    left: -420px;
+    width: 509px;
+    height: 202px;
+    padding: 15px 15px;
+    background-color: @bkgColorLinkHover;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+
+    table {
+        .text-param(13px, 16px);
+        font-weight: 400;
+        color: #323232;
+        padding-right: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+        border-bottom: 1px solid #999999;
+    }
+
+    .ice-cream-img {
+        width: 60px;
+        position: relative;
+    }
+
+    .ice-cream-img::before {
+        position: absolute;
+        top: 13px;
+        left: 0px;
+        content: "";
+        height: 11px;
+        width: 1px;
+        background-color: #353535;
+        transform: rotate(45deg);
+    }
+
+    .ice-cream-img::after {
+        position: absolute;
+        top: 13px;
+        left: 0px;
+        content: "";
+        height: 11px;
+        width: 1px;
+        background-color: #353535;
+        transform: rotate(-45deg);
+    }
+
+    .ice-cream-describe {
+        width: 250px;
+        text-align: left;
+    }
+
+    .ice-cream-quantity {
+        width: 110px;
+
+        span {
+            color: #999999;
+        }
+    }
+
+    label {
+        .text-param(15px, 18px);
+        display: block;
+        margin-bottom: 20px;
+        text-align: right;
+        font-weight: 700;
+        color: #333333;
+    }
+
+    .btn-basket {
+        display: block;
+        float: right;
+    }
+}
+
+.full:hover + .basket-form,
+.basket-form:hover,
+.basket-form:active {
+    display: block;
 }
 
 .mode {
     float: right;
     text-align: right;
+    margin-right: 25px;
 
     span {
         .text-param(14px, 20px);
@@ -587,6 +762,7 @@ a {
     padding-bottom: 5px;
     color: @featuresTxtColor;
     background-color: @featuresBkgColor;
+    background-image: url(../img/texture.png);
 
     h3 {
         color: @featuresTxtColor;
@@ -927,6 +1103,7 @@ a {
 }
 
 //catalog
+
 .catalog {
     background-color: @bodyColorSld1;
 }
@@ -1055,6 +1232,35 @@ a {
 
 .criterion-list {
     display: none;
+    position: absolute;
+    .text-param(14px, 16px);
+    width: 192px;
+    font-weight: 400;
+    color: #323232;
+    background-color: #ffffff;
+    z-index: 1;
+
+    li {
+        display: block;
+        width: inherit;
+        padding: 10px 0;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    li:hover {
+        background-color: @menuLinkHover;
+    }
+
+    li:active {
+        background-color: @menuLinkActive;
+    }
+}
+
+.criterion-link:hover + .criterion-list,
+.criterion-list:hover,
+.criterion-list:active {
+    display: block;
 }
 
 .criterion-range {

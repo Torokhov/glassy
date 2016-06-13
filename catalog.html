@@ -18,7 +18,7 @@
                 <nav class="main-navigation clearfix">
                     <ul class="shop-links">
                         <li class="shop-link">
-                            <a class="catalog visit" href="#">Каталог</a>
+                            <a class="ice-cream-catalog visit" href="#">Каталог</a>
                             <ul class="menu">
                                 <li><a href="#">Новинки</a></li>
                                 <li><a class="visit" href="catalog.html">Сливочное</a></li>
@@ -31,8 +31,8 @@
                         <li class="shop-link"><a href="about.html">О Компании</a></li>
                     </ul>
                     <div class="user-block">
-                        <ul>
-                            <li>
+                        <ul class="user-links">
+                            <li class="user-link">
                                 <a class="search" href="search-form.html">
                                     <svg xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -43,7 +43,7 @@
                                     <input type="search" name="search" placeholder="Что ищем?">
                                 </form>
                             </li>
-                            <li>
+                            <li class="user-link">
                                 <a class="enter" href="enter-form.html">
                                     <span><svg xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -51,15 +51,63 @@
     <path fillRule="evenodd" d="M 17.06 18.99C 17.06 18.99 6 18.99 6 18.99 4.34 18.99 3 17.64 3 15.99 3 15.99 3 15 3 15 3 15 5 15 5 15 5 15 5 17 5 17 5 17 18 17 18 17 18 17 18 2 18 2 18 2 5 2 5 2 5 2 5 3.97 5 3.97 5 3.97 3 3.97 3 3.97 3 3.97 3 3.01 3 3.01 3 1.35 4.34 0.01 6 0.01 6 0.01 17.06 0.01 17.06 0.01 18.72 0.01 20.06 1.35 20.06 3.01 20.06 3.01 20.06 15.99 20.06 15.99 20.06 17.64 18.72 18.99 17.06 18.99ZM 6.02 4.16C 6.02 4.16 13.05 9.46 13.05 9.46 13.05 9.46 6.02 14.76 6.02 14.76 6.02 14.76 6.02 12.01 6.02 12.01 6.02 12.01-0.01 12.01-0.01 12.01-0.01 12.01-0.01 6.9-0.01 6.9-0.01 6.9 6.02 6.9 6.02 6.9 6.02 6.9 6.02 4.16 6.02 4.16Z" opacity="0.99"/></svg></span>
                                 Вход
                                 </a>
+                                <form class="enter-form" method="get">
+                                    <input type="email" name="email" placeholder="Электронная почта">
+                                    <input type="password" name="password" placeholder="Пароль">
+                                    <a class="btn enter-btn" href="#">Войти</a>
+                                    <ul class="enter-links">
+                                        <li>
+                                            <a class="pass-remember" href="#">Забыли пароль?</a>
+                                        </li>
+                                        <li>
+                                            <a class="new-reg" href="#">Новая регистрация</a>
+                                        </li>
+                                    </ul>
+                                </form>
                             </li>
-                            <li>
-                            <a class="basket" href="basket.html">
+                            <li class="user-link">
+                            <a class="basket full" href="basket.html">
                             <span><svg xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	width="21px" height="20px" viewBox="0 0 21 20">
     <path fillRule="evenodd" d="M 20.58 4.46C 20.58 4.46 19.37 13.37 19.37 13.37 19.19 14.29 18.35 15.01 17.49 15.01 17.49 15.01 6.61 15.01 6.61 15.01 5.75 15.01 4.91 14.29 4.73 13.37 4.73 13.37 3.26 3.09 3.26 3.09 3.12 2.35 3.11 2.11 3.13 2.03 3.13 2.03 1 2.03 1 2.03 0.45 2.03-0 1.58-0 1.03-0 0.48 0.45 0.03 1 0.03 1 0.03 5 0.03 5 0.03 5.55 0.03 6 0.48 6 1.03 6 1.55 5.6 1.96 5.1 2.01 5.1 2.01 19.07 2.01 19.07 2.01 20.17 2.01 20.84 3.14 20.58 4.46ZM 5.42 3.98C 5.42 3.98 6.73 12.98 6.73 12.98 6.73 12.98 17.4 12.98 17.4 12.98 17.4 12.98 17.4 12.97 17.41 12.96 17.41 12.96 18.59 4.18 18.59 4.18 18.59 4.18 18.62 3.98 18.62 3.98 18.62 3.98 5.42 3.98 5.42 3.98ZM 7.25 15.99C 8.28 15.99 9.12 16.83 9.12 17.86 9.12 18.9 8.28 19.74 7.25 19.74 6.21 19.74 5.37 18.9 5.37 17.86 5.37 16.83 6.21 15.99 7.25 15.99ZM 16.25 15.99C 17.28 15.99 18.12 16.83 18.12 17.86 18.12 18.9 17.28 19.74 16.25 19.74 15.21 19.74 14.37 18.9 14.37 17.86 14.37 16.83 15.21 15.99 16.25 15.99Z"/></svg></span>
-                            Пусто
+                            2 товара
                             </a>
+                            <form class="basket-form" method="get">
+                                <table>
+                                    <tr>
+                                        <td class="ice-cream-img">
+                                            <img src="./img/ice-cream-basket1.png" width="33" height="33" alt="Изображение мороженого">
+                                        </td>
+                                        <td class="ice-cream-describe">
+                                            Пломбир с апельсиновым джемом
+                                        </td>
+                                        <td class="ice-cream-quantity">
+                                            1,5 кг х <span>200 руб.</span>
+                                        </td>
+                                        <td class="ice-cream-price">
+                                            300 руб.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ice-cream-img">
+                                            <img src="./img/ice-cream-basket2.png" width="33" height="33" alt="Изображение мороженого">
+                                        </td>
+                                        <td class="ice-cream-describe">
+                                            Клубничный пломбир с присыпкой
+                                            из белого шоколада
+                                        </td>
+                                        <td class="ice-cream-quantity">
+                                            1,5 кг х <span>300 руб.</span>
+                                        </td>
+                                        <td class="ice-cream-price">
+                                            450 руб.
+                                        </td>
+                                    </tr>
+                                </table>
+                                <label>Итого: 750 руб.</label>
+                                <a class="btn btn-basket" href="#">Оформить заказ</a>
+                            </form>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +118,7 @@
             </div>
             <nav class="breadscrumbs">
                 <ul>
-                    <li><a href="#">Главная  &raquo;</a></li>
+                    <li><a href="index.html">Главная  &raquo;</a></li>
                     <li><a href="#">Каталог  &raquo;</a></li>
                     <li><a href="#">Сливочное</a></li>
                 </ul>
@@ -87,10 +135,10 @@
 	width="9px" height="5px" viewBox="0 0 9 5">
 <path fillRule="evenodd" d="M 0.56-0.01C 0.56-0.01 8.36-0.01 8.36-0.01 8.36-0.01 4.51 5.01 4.51 5.01 4.51 5.01 4.39 5.01 4.39 5.01 4.39 5.01 0.56-0.01 0.56-0.01Z"/></svg></span></a>
                         <ul class="criterion-list">
-                            <li>По популярности</li>
-                            <li>Сначала дорогие</li>
-                            <li>Сначала недорогие</li>
-                            <li>По жирности</li>
+                            <li>по популярности</li>
+                            <li>сначала дорогие</li>
+                            <li>сначала недорогие</li>
+                            <li>по жирности</li>
                         </ul>
                     </li>
                     <li>
